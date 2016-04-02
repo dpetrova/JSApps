@@ -1,0 +1,18 @@
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#books}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td><a href="https://{{isbn}}">{{isbn}}</a></td>
+    </tr>
+    {{/books}}
+    </tbody>
+</table>

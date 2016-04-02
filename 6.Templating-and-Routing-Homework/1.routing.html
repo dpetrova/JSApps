@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Routing</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/shimney-sammy/main.js"></script>
+</head>
+<body>
+<h2 id="greeting"></h2>
+<ul>
+    <li><a href="#/Badstuber">Badstuber</a></li>
+    <li><a href="#/Neuer">Neuer</a></li>
+    <li><a href="#/Lewandowski">Lewandowski</a></li>
+    <li><a href="#/Lahm">Lahm</a></li>
+    <li><a href="#/Müller">Müller</a></li>
+</ul>
+<script>
+    var app = app || {};
+
+    (function() {
+        app.router = Sammy(function () {
+            var selector = '#greeting';
+
+            this.get('#/Badstuber', function() {
+                $(selector).html('Hello, Badstuber');
+            });
+
+            this.get('#/Neuer', function() {
+                $(selector).html('Hello, Neuer');
+            });
+
+            this.get('#/Lewandowski', function() {
+                $(selector).html('Hello, Lewandowski');
+            });
+
+            this.get('#/Lahm', function() {
+                $(selector).html('Hello, Lahm');
+            });
+
+            this.get('#/Müller', function() {
+                $(selector).html('Hello, Müller');
+            });
+        });
+
+        app.router.run('#/');
+    }());
+</script>
+</body>
+</html>

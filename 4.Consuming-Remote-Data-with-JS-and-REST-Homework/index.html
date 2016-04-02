@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <style>
+        input{
+            width: 300px;
+        }
+    </style>
+    <script src="jQuery/jquery-2.2.1.min.js"></script>
+</head>
+<body>
+<section class="books">
+    <button id="list">List all Books</button><br/>
+    <ul id="books">
+    </ul>
+    <form class="add">
+        <input type="text" name="title" value="" placeholder="Title..." required="required" />
+        <input type="text" name="author" value="" placeholder="Author..." required="required" />
+        <input type="text" name="isbn" value="" placeholder="ISBN..." required="required" />
+        <button id="add">Add Book</button><br/>
+        <button id="submit">Submit Book</button><br/>
+    </form>
+</section>
+<script src="list-all-books.js"></script>
+<script src="create-book.js"></script>
+<script src="delete-book.js"></script>
+<script src="edit-book.js"></script>
+</body>
+</html>

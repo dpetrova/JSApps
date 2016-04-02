@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/shimney-sammy/main.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+</head>
+<body>
+<h2>Students older than 30 and sorted by name:</h2>
+<div id="wrapper"></div>
+<script>
+    (function(){
+        var students = [{"gender":"Male","firstName":"Joe","lastName":"Riley","age":22,"country":"Russia"},
+            {"gender":"Female","firstName":"Lois","lastName":"Morgan","age":41,"country":"Bulgaria"},
+            {"gender":"Male","firstName":"Roy","lastName":"Wood","age":33,"country":"Russia"},
+            {"gender":"Female","firstName":"Diana","lastName":"Freeman","age":40,"country":"Argentina"},
+            {"gender":"Female","firstName":"Bonnie","lastName":"Hunter","age":23,"country":"Bulgaria"},
+            {"gender":"Male","firstName":"Joe","lastName":"Young","age":16,"country":"Bulgaria"},
+            {"gender":"Female","firstName":"Kathryn","lastName":"Murray","age":22,"country":"Indonesia"},
+            {"gender":"Male","firstName":"Dennis","lastName":"Woods","age":37,"country":"Bulgaria"},
+            {"gender":"Male","firstName":"Billy","lastName":"Patterson","age":24,"country":"Bulgaria"},
+            {"gender":"Male","firstName":"Willie","lastName":"Gray","age":42,"country":"China"},
+            {"gender":"Male","firstName":"Justin","lastName":"Lawson","age":38,"country":"Bulgaria"},
+            {"gender":"Male","firstName":"Ryan","lastName":"Foster","age":24,"country":"Indonesia"},
+            {"gender":"Male","firstName":"Eugene","lastName":"Morris","age":37,"country":"Bulgaria"},
+            {"gender":"Male","firstName":"Eugene","lastName":"Rivera","age":45,"country":"Philippines"},
+            {"gender":"Female","firstName":"Kathleen","lastName":"Hunter","age":28,"country":"Bulgaria"}];
+
+        var studentsOlderThan30 = _.filter(students, function(student){
+            return student.age > 30;
+        });
+
+        var studentsSortedByNames = _.sortBy(studentsOlderThan30, 'firstName');
+
+        var processedStudents = {'students': studentsSortedByNames};
+
+        $.get('3.template.html', function (template) {
+            var output = Mustache.render(template, processedStudents);
+            $('#wrapper').html(output);
+        })
+    })();
+</script>
+</body>
+</html>

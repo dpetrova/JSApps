@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Templating</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/shimney-sammy/main.js"></script>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+</head>
+<body>
+<div id="wrapper"></div>
+<script>
+    (function getBooks(){
+        $.ajax({
+            method: "GET",
+            headers: {
+                "Authorization": "Basic a2lkXy0xVV9kUUFNeVo6ZTNjMmUxM2Q0OTZlNGU4Y2E1YzY2YmI5OGRlZjU3YjY="
+            },
+            url: "https://baas.kinvey.com/appdata/kid_-1U_dQAMyZ/books"
+        }).success(function(data) {
+            //console.log(data);
+            var books = {'books': data};
+            $.get('2.template.html', function (template) {
+                var output = Mustache.render(template, books);
+                $('#wrapper').html(output);
+            })
+        }).error(function() {
+            alert('Cannot load books.');
+        });
+    })();
+</script>
+</body>
+</html>

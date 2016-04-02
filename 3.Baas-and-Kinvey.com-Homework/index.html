@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Backend at kinvey.com</title>
+    <style>
+        section{
+            display: inline-block;
+            margin: 20px;
+        }
+        #countries li:hover{
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="jquery-2.2.1.min.js"></script>
+</head>
+<body>
+<section class="counties">
+    <h2>Countries</h2>
+    <ul id="countries">
+    </ul>
+    <div class="add">
+        <input type="text" name="add" value="" placeholder="Country..." />
+        <button id="add">Add Country</button><br/>
+    </div>
+    <div class="edit">
+        <input type="text" name="edit" value="" placeholder="Country..." />
+        <input type="text" name="edit" value="" placeholder="Enter JSON object ->{'key': 'value'}..." />
+        <button id="edit">Edit Country</button><br/>
+    </div>
+    <div class="delete">
+        <input type="text" name="delete" value="" placeholder="Country..." />
+        <button id="delete">Delete Country</button><br/>
+    </div>
+</section>
+<section class="towns">
+    <h2>Towns</h2>
+    <ul id="towns">
+    </ul>
+    <div class="addTown">
+        <input type="text" name="add" value="" placeholder="Town..." />
+        <input type="text" name="add" value="" placeholder="to Country..." />
+        <button id="addTown">Add Town</button><br/>
+    </div>
+    <div class="editTown">
+        <input type="text" name="edit" value="" placeholder="Town..." />
+        <input type="text" name="edit" value="" placeholder="Enter JSON object ->{'key': 'value'}..." />
+        <button id="editTown">Edit Town</button><br/>
+    </div>
+    <div class="deleteTown">
+        <input type="text" name="delete" value="" placeholder="Town..." />
+        <button id="deleteTown">Delete Town</button><br/>
+    </div>
+</section>
+<script src="list-countries.js"></script>
+<script src="edit-countries.js"></script>
+<script src="list-towns-by-country.js"></script>
+<script src="edit-towns.js"></script>
+</body>
+</html>
