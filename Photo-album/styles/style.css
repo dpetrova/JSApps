@@ -1,0 +1,206 @@
+.container {
+    width: 100%;
+}
+
+#wrapper>ul li {
+    display: inline-block;
+}
+
+.users{
+    font-size: 20px;
+}
+
+.users>a{
+    font-size: 20px;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container>header {
+    background-color: #5680a1;
+    color: white;
+    width: 100%;
+}
+
+.container>header h1 {
+    margin: 0;
+    padding: 5px;
+    font-size: 30px;
+}
+.container>header h3 {
+    margin: 0;
+    padding: 5px;
+    font-size: 10px;
+}
+
+
+.container>header nav ul li.active a {
+    background-color: #428bca;
+}
+
+
+.jumbotron {
+    margin: 10px 20px 10px 60px;
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    background-image: url("../resources/sky.jpg");
+}
+
+.axestagood {
+    color: #ffffff;
+}
+
+#axestagood {
+    margin-top: -20px;
+    color: #f5f5f5;
+}
+
+aside {
+    margin: 10px 10px 40px 60px;
+}
+
+input {
+    display: block;
+}
+
+.getPictures {
+    width: 256px;
+    height: 256px;
+    width: 250px;
+    height: 250px;
+    background-image: url("../resources/attach_pic.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.addPicture{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 256px;
+}
+
+h3 {
+    text-align: left;
+}
+
+.row>h3 {
+    text-align: left;
+    font-size: 18px;
+}
+
+.users>h3 {
+    text-align: left;
+    font-size: 16px;
+}
+
+.cat-pics>h3{
+text-align: center;
+}
+
+.mail>h4 {
+    text-align: left;
+    font-size: 12px;
+    color: #428bca;
+}
+
+
+.voteImg {
+    float: right;
+}
+
+span> img:hover {
+    cursor: pointer;
+    width: 110%;
+    height: 110%;
+}
+
+.cat-pics>li:nth-of-type(1)>.getPictures{
+    background-image: url("../resources/nature2.png");
+    background-repeat: no-repeat;
+}
+
+.cat-pics>li:nth-of-type(2)>.getPictures{
+    background-image: url("../resources/animals.png");
+    background-repeat: no-repeat;
+}
+
+.cat-pics>li:nth-of-type(3)>.getPictures{
+    background-image: url("../resources/photo.png");
+    background-repeat: no-repeat;
+}
+
+.cat-pics>li:nth-of-type(4)>.getPictures{
+     background-image: url("../resources/game.png");
+     background-repeat: no-repeat;
+ }
+
+.cat-pics>li:nth-of-type(5)>.getPictures{
+    background-image: url("../resources/tool.png");
+    background-repeat: no-repeat;
+}
+
+.pic-enlarged {
+    width: 70%;
+}
+
+.enlarge:hover {
+    cursor: pointer;
+}
+
+.pic-details>img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pic-details>div{
+    text-align: center;
+}
+
+#picture-name{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.picture-upload {
+    width: 250px;
+    height: 50px;
+    background-color: #008CBA;;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 15px;
+}
+.picture-upload input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

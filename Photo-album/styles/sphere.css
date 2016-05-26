@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.sphere {
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10em;
+    -webkit-animation: spinSphere 10s infinite linear;
+    animation: spinSphere 10s infinite linear;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+[class^="ring"] {
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+[class$="1"] {
+    -webkit-transform: rotateY(10deg);
+    transform: rotateY(10deg);
+}
+
+[class$="2"] {
+    -webkit-transform: rotateY(20deg);
+    transform: rotateY(20deg);
+}
+
+[class$="3"] {
+    -webkit-transform: rotateY(30deg);
+    transform: rotateY(30deg);
+}
+
+/*[class$="4"] {*/
+    /*-webkit-transform: rotateY(40deg);*/
+    /*transform: rotateY(40deg);*/
+/*}*/
+
+[class$="5"] {
+    -webkit-transform: rotateY(50deg);
+    transform: rotateY(50deg);
+}
+
+[class$="6"] {
+    -webkit-transform: rotateY(60deg);
+    transform: rotateY(60deg);
+}
+
+/*[class$="7"] {*/
+    /*-webkit-transform: rotateY(70deg);*/
+    /*transform: rotateY(70deg);*/
+/*}*/
+
+/*[class$="8"] {*/
+    /*-webkit-transform: rotateY(80deg);*/
+    /*transform: rotateY(80deg);*/
+/*}*/
+
+/*[class$="9"] {*/
+    /*-webkit-transform: rotateY(90deg);*/
+    /*transform: rotateY(90deg);*/
+/*}*/
+
+/*[class$="10"] {*/
+    /*-webkit-transform: rotateY(100deg);*/
+    /*transform: rotateY(100deg);*/
+/*}*/
+
+[class$="11"] {
+    -webkit-transform: rotateY(110deg);
+    transform: rotateY(110deg);
+}
+
+[class$="12"] {
+    -webkit-transform: rotateY(120deg);
+    transform: rotateY(120deg);
+}
+
+[class$="13"] {
+    -webkit-transform: rotateY(130deg);
+    transform: rotateY(130deg);
+}
+
+[class$="14"] {
+    -webkit-transform: rotateY(140deg);
+    transform: rotateY(140deg);
+}
+
+[class$="15"] {
+    -webkit-transform: rotateY(150deg);
+    transform: rotateY(150deg);
+}
+
+[class$="16"] {
+    -webkit-transform: rotateY(160deg);
+    transform: rotateY(160deg);
+}
+
+[class$="17"] {
+    -webkit-transform: rotateY(170deg);
+    transform: rotateY(170deg);
+}
+
+[class$="18"] {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+[class$="19"] {
+    -webkit-transform: rotateX(190deg);
+    transform: rotateX(190deg);
+}
+
+[class$="20"] {
+    -webkit-transform: rotateX(200deg);
+    transform: rotateX(200deg);
+}
+
+[class$="21"] {
+    -webkit-transform: rotateX(210deg);
+    transform: rotateX(210deg);
+}
+
+[class$="22"] {
+    -webkit-transform: rotateX(220deg);
+    transform: rotateX(220deg);
+}
+
+[class$="23"] {
+    -webkit-transform: rotateX(230deg);
+    transform: rotateX(230deg);
+}
+
+[class$="24"] {
+    -webkit-transform: rotateX(240deg);
+    transform: rotateX(240deg);
+}
+
+[class$="25"] {
+    -webkit-transform: rotateX(250deg);
+    transform: rotateX(250deg);
+}
+
+[class$="26"] {
+    -webkit-transform: rotateX(260deg);
+    transform: rotateX(260deg);
+}
+
+[class$="27"] {
+    -webkit-transform: rotateX(270deg);
+    transform: rotateX(270deg);
+}
+
+[class$="28"] {
+    -webkit-transform: rotateX(280deg);
+    transform: rotateX(280deg);
+}
+
+[class$="29"] {
+    -webkit-transform: rotateX(290deg);
+    transform: rotateX(290deg);
+}
+
+[class$="30"] {
+    -webkit-transform: rotateX(300deg);
+    transform: rotateX(300deg);
+}
+
+[class$="31"] {
+    -webkit-transform: rotateX(310deg);
+    transform: rotateX(310deg);
+}
+
+[class$="32"] {
+    -webkit-transform: rotateX(320deg);
+    transform: rotateX(320deg);
+}
+
+[class$="33"] {
+    -webkit-transform: rotateX(330deg);
+    transform: rotateX(330deg);
+}
+
+[class$="34"] {
+    -webkit-transform: rotateX(340deg);
+    transform: rotateX(340deg);
+}
+
+[class$="35"] {
+    -webkit-transform: rotateX(350deg);
+    transform: rotateX(350deg);
+}
+
+[class$="36"] {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+}
+
+@-webkit-keyframes spinSphere {
+    from {
+        -webkit-transform: rotateZ(60deg) rotateX(0);
+        transform: rotateZ(60deg) rotateX(0);
+    }
+    to {
+        -webkit-transform: rotateZ(60deg) rotateX(360deg);
+        transform: rotateZ(60deg) rotateX(360deg);
+    }
+}
+
+@keyframes spinSphere {
+    from {
+        -webkit-transform: rotateZ(60deg) rotateX(0);
+        transform: rotateZ(60deg) rotateX(0);
+    }
+    to {
+        -webkit-transform: rotateZ(60deg) rotateX(360deg);
+        transform: rotateZ(60deg) rotateX(360deg);
+    }
+}
